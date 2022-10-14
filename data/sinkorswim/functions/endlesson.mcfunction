@@ -1,0 +1,4 @@
+execute if entity @e[type=armor_stand,name="endlessModeSwitch",scores={sinkOrSwimData=0}] run execute if entity @e[type=armor_stand,name="clearCaveAir",scores={sinkOrSwimData=0}] run tellraw @a {"text": "Endless mode turned on."}
+execute if entity @e[type=armor_stand,name="endlessModeSwitch",scores={sinkOrSwimData=0}] run execute if entity @e[type=armor_stand,name="clearCaveAir",scores={sinkOrSwimData=0}] run scoreboard players set @e[type=armor_stand,name="endlessModeSwitch"] sinkOrSwimData 1
+
+execute unless entity @e[type=armor_stand,name="clearCaveAir",scores={sinkOrSwimData=0}] run tellraw @a {"text": "The Sink Or Swim datapack is still processing the world, please wait until it is done!"}
